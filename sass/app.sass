@@ -1,0 +1,264 @@
+$font: ("Arial", sans-serif)
+$fontSize: 13px
+
+html
+  height: 100%
+  margin: 0
+.body
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  font-family: $font
+  font-size: $fontSize
+  height: 100%
+  margin: 0px
+.nav 
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  height: 30px
+  margin-top: 15px
+  &__leftblock
+    margin: 0px 0 0 10px
+    justify-content: space-around
+  &__link
+    padding-left: 15px
+    text-decoration: none 
+    color: black
+    cursor: pointer
+    &_r
+      &:hover
+        text-decoration: underline
+        color: rgba(0,0,0,0.75)
+    &Button
+      background-image: linear-gradient(to top, rgb(67, 135, 253), rgb(70, 131, 234))
+      line-height: 28px
+      padding: 0 12px
+      border: 1px solid rgb(66, 133, 244)
+      border-radius: 2px
+      font-weight: 700
+      line-height: 28px
+      width: 44px
+      color: white
+      outline: none
+      margin: 0 30px 0 15px
+      height: 28px
+    &_l
+      opacity: 0.75
+      padding-right: 4px
+      &:hover
+        text-decoration: underline
+  &__PanelImage
+    opacity: 0.55
+    margin: 0 6px
+    &:hover
+      opacity: 1
+  &__Panel
+    z-index: 999
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px 0px
+    box-sizing: border-box
+    border: 1px solid #ccc
+    width: 320px
+    position: absolute
+    top: 40px
+    right: -83px
+    &_hidden
+      display: none
+    &Wrapper
+      position: absolute
+      top: -9px
+      right: 87px
+      width: 0
+      height: 0
+      border-left: 8.5px solid transparent
+      border-right: 8.5px solid transparent
+      border-bottom: 8.5px solid #ccc
+    &Arrow
+      position: absolute
+      top: 1px
+      right: -8.2px
+      width: 0
+      height: 0
+      z-index: 2323
+      border-left: 8.5px solid transparent
+      border-right: 8.5px solid transparent
+      border-bottom: 8.5px solid white
+    &MoreSection
+      background-color: rgb(245, 245, 245)
+      height: 40px
+      text-align: center
+      &Link
+        text-decoration: none
+        line-height: 40px
+        &:active
+          color: initial
+    &List
+      box-sizing: border-box
+      display: flex
+      flex-wrap: wrap
+      flex-direction: row
+      align-content: center
+      width: 318px
+      list-style-type: none  
+      padding: 26px 27px 28px 27px
+      margin: 0px
+      background-color: white
+      &Container
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 88px
+        height: 100px
+        text-align: center
+        &:hover
+          box-sizing: border-box
+          border: 1px solid rgba(0,0,0,0.1)
+
+      &Icon
+        width: 45px
+      &Link
+        height: 60px
+        text-decoration: none
+        &:active
+          color: initial
+        &Caption
+          margin-top: 9px
+          color: rgba(0,0,0,0.87)
+    &Container
+      position: relative
+
+  &__rightblock
+    display: flex
+    margin-top: 0px
+
+.main
+  margin-top: 153px
+  &__wrapper
+    margin: 0 auto auto auto
+  &__logoContainer
+    text-align: center
+    padding-bottom: 24px
+  &__input
+    text-align: center
+    padding-bottom: 32px
+  & input[type="text"]
+    padding: 2px 65px 0px 15px
+    width: 505px
+    background-image: url("../images/microphone.png")
+    background-color: transparent
+    background-position: 98% center 
+    background-repeat: no-repeat
+    background-size: 25px 25px
+    height: 42px
+    font-size: 16px
+    font-weight: 400
+    border-width: 0px
+    border-color: rgba(0,0,0, 0.05)
+    border-radius: 2px
+    outline-style: none
+    font-size: 1.25rem
+    font-weight: 100
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)
+    &:focus
+      outline-style: none
+    &:active
+      outline-style: none
+    &:hover
+      transition-property: box-shadow
+      transition-duration: 0.2s
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+      box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08)
+    &:before
+      width: 10px
+  &__submits
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+  &__submitsButton
+    display: inline-block
+    background-image: linear-gradient(to top,#f5f5f5,#f1f1f1)
+    border-radius: 2px
+    border: 1px solid rgb(242, 242, 242)
+    height: 36px
+    font-weight: 700
+    color: rgb(117, 117, 117)
+    margin-left: 8px
+    padding: 0px 14px 0px 14px
+    position: relative
+    &List
+      position: absolute
+      top: -180px
+      width: 145px
+      list-style-type: none
+      padding: 0px
+      margin: 0px
+      &Elem
+      text-align: left
+      width: 145px
+    &_b
+      line-height: 36px
+      width: 141px
+      overflow: hidden 
+    &:hover
+      background-color: #F8F8F8
+      background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1)
+      background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1)
+      background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1)
+      background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1)
+      background-image: linear-gradient(top,#f8f8f8,#f1f1f1)
+      
+      border: 1px solid #C6C6C6
+      color: #333
+      
+      -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,.1)
+      -moz-box-shadow: 0px 1px 1px rgba(0,0,0,.1)
+      box-shadow: 0px 1px 1px rgba(0,0,0,.1)
+    &_s        
+      &:focus
+        outline-style: none
+        border: 1px solid #1E7DE6 
+      &:active
+        @extend .main__submitsButton_s, :focus
+    
+      &:focus
+        outline-width: 2px
+      &:active
+        @extend .main__submitsButton_b, :focus
+  
+
+.footer
+  display: flex
+  height: 40px
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  margin: auto 0px 0px 0px
+  border-top: 1px solid rgb(228, 228, 228)
+  background-color: #f2f2f2
+  &__leftblock
+    margin-left: 7px
+    margin-bottom: 0px
+  &__rightblock
+    @extend .nav__rightblock
+    margin-right: 30px
+    margin-bottom: 0px
+  &__link
+    color: #666
+    padding-left: 23px
+    font-size: small
+    line-height: 40px
+    text-decoration: none
+    &:hover
+        text-decoration: underline
+    &_r
+      padding-left: 27px
+
+        
+
+
+
+
+
+  
